@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #aa78d3;
+    color: #333;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 60px;
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 45px;
+    margin: 10px auto;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 25%;
+    background-image: url("images/notcompleted.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+button{
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15%;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: #ff4500;
+}
+
+input[type="text"]{
+    width: 83%;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+input[type="text"]:focus{
+    border-color: #ff6347;
+    outline: none;
+}
+
+ul li.completed{
+    text-decoration: line-through;
+    background-color: #d3d3d3;
+}
+
+ul li.completed::before{
+    background-image: url("images/completed.png");
+}
+
+span {
+    position: absolute;
+    right: 10px;
+    color: #ff6347;
+    cursor: pointer;
+    border-radius: 45%;
+}
+
+span:hover {
+    background: #837070;
+}
